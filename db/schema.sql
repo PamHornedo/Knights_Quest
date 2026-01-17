@@ -1,6 +1,10 @@
 DROP DATABASE IF EXISTS knights_quest;
 CREATE DATABASE knights_quest;
 
+\c knights_quest
+
+select current_database();
+
 CREATE TABLE realms (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -27,11 +31,4 @@ CREATE TABLE quests (
     realm_id INTEGER REFERENCES realms(id),
     description TEXT,
     created_at TIMESTAMP DEFAULT now()
-);
-
-CREATE TABLE quest_assignments (
-    id SERIAL PRIMARY KEY,
-    quest_id INTEGER REFERENCES quests(id) ON DELETE CASCADE,
-    character_id INTEGER REFERENCES characters(id),
-    item_id INTEGER REFERENCES items(id)
 );

@@ -1,3 +1,7 @@
+\c knights_quest
+
+select current_database();
+
 INSERT INTO realms (name, ruler, description) VALUES 
 ('Desert Kingdom', 'Sultan Rashid the Wise', 'A sprawling desert empire built on trade routes. Home to master merchants and sand-sailors.'),
 ('Coastal Dominion', 'Admiral Lady Coretta', 'A maritime realm of skilled sailors, pirates, and fishing villages. The wealth flows from the seas.'),
