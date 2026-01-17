@@ -25,6 +25,7 @@ CREATE TABLE quests (
     id SERIAL PRIMARY KEY,
     title VARCHAR(150) NOT NULL,
     realm_id INTEGER REFERENCES realms(id),
+    description TEXT,
     created_at TIMESTAMP DEFAULT now()
 );
 
